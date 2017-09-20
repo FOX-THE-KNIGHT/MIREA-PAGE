@@ -1,0 +1,195 @@
+body{
+    position: relative;
+}
+
+
+#Red-1{
+    position: absolute;
+    top:40%;
+    left: 2%;
+    border: 2px solid gray; 
+}
+
+.spinBlock{
+    position: relative;
+    width: 150px;
+    height: 200px;
+    background-color: #727272;
+    top:17%;
+    left:20%;
+}
+
+.pointView{
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    background-color: #848484;
+    width: 50%;
+    height: 40%;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    text-align: center;
+    font-family: sans-serif;
+    color: orangered;
+    border: 2px solid #292929;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.circleSpinBaseRight{
+    position: relative;
+    display: block;
+    
+    top: 65%;
+    left: 56%;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    cursor: pointer;
+    
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3), inset 1px 2px 0px rgba(255,255,255,.3);
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+    
+}
+/*
+.circleSpinBaseRight::after{
+    content: "";
+    position: absolute;
+    top: 31%;
+    left: 8%;
+    width: 0px;
+    height: 0px;
+    border-top: 18px solid orangered;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    transform: rotate(90deg);
+}
+*/
+
+
+.circleSpinBaseRight:hover{
+   background-color: #262626;
+   box-shadow:inset 1px 1px 5px rgba(0,0,0,.3),  1px 2px 0px rgba(0,0,0,.3);
+}
+
+/*
+
+.circleSpinBaseRight:hover::after{
+    border-top: 18px solid #ad2f00;
+}
+*/
+
+.circleSpinBaseLeft{
+    position: relative;
+    display: block;
+    
+    top: 45%;
+    left: 20%;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    cursor: pointer;
+    
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3), inset 1px 2px 0px rgba(255,255,255,.3);
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+    
+}
+
+.arrowRight{
+    position: absolute;
+    top: 30%;
+    left: 24%;
+    width: 0px;
+    height: 0px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    transform: rotate(-90deg);
+}
+
+.arrowLeft{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 0px;
+    height: 0px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    transform: rotate(90deg);
+}
+
+#leftPointButton{
+    border-top: 18px solid orangered; 
+    opacity: 1;
+}
+
+/*
+.circleSpinBaseLeft::after{
+    content: "";
+    position: absolute;
+    top: 31%;
+    left: 22%;
+    width: 0px;
+    height: 0px;
+    border-top: 18px solid orangered;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    transform: rotate(-90deg);
+}
+*/
+#rightPointButton{
+  border-top: 18px solid orangered; 
+     opacity: 1;
+}
+
+.circleSpinBaseLeft:hover{
+   background-color: #262626;
+   box-shadow:inset 1px 1px 1px rgba(0,0,0,.3),  1px 2px 0px rgba(0,0,0,.3);
+}
+
+.circleSpinBaseLeft:hover::after{
+    border-top: 18px solid #ad2f00;
+}
+
+.spinContainer{
+   position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 80px;
+    margin-top: 80px;
+    width: 600px;
+    height: 600px;
+    background-color: darkgray;
+    display: inline-block;
+}
+
+.spinnerRight{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 100px solid black;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    transform: rotate(-90deg);
+    margin-left: 150px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.spnnerRight:hover{
+    border-top: 100px solid aqua;
+}
+.spinnerLeft{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 100px solid black;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    transform: rotate(90deg);
+        
+}
+
+#leftPointButton::after{
+    opacity: .5;
+}
+

@@ -1,0 +1,910 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>MAIN PAGE </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/mainStyle.css">
+        <script src="scripts/mainScript.js"></script>
+    </head>
+    <body class="bodyBackground">
+      <div class="lists">
+         <div id="directionList">
+             <select class="listParam" id="chList" onchange="profileListCreate(this)" >
+              <option value="">Направление</option>
+              <option value="09.03.01" id="09.03.01">09.03.01</option>
+              <option value="" id="09.03.03">09.03.03</option>
+              <option value="" id="09.03.04">09.03.04</option>
+              <option value="" id="15.03.04">15.03.04</option>
+              <option value=""></option>
+          </select>
+         </div>
+         <div id="profileList">
+             <select class="listParam" id="prList">
+              <option value=""  >Профиль</option>
+             
+          </select>
+         </div> 
+      </div>
+       <div>
+        <table width="80%" align="center" border="3" id="mainTable" style="position: relative;  box-shadow: 5px 5px 3px rgba(0,0,0,0.6); min-width: 1200px">
+            <tr>
+                <th width="29%" class="upTable"><div class="HeadFont">Доступ к технике</div></th>
+                <th width="14%" class="redZone"><div class="subHeadRed" style="width: auto;">Ключевые дисциплины <br> Красная зона (x1)</div></th>
+                <th  width="14%" class="yellowZone"><div class="subHeadYellow"  style="width: auto;">Вспомогательные дисциплины <br> Желтая зона (x0.5)</div></th>
+                <th  width="14%" class="greenZone"><div class="subHeadGreen"  style="width: auto;">Прочие дисциплины <br> Зеленая зона (x0.25)</div></th>
+                    <th width="29%" class="upRightTable"> <div class="HeadFont">Доступ к мероприятиям</div></th>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" class="semesterLook firstSemester">Первый семестр</td>
+            </tr>
+            <tr  style="position: relative; height: 375px;">
+                <td class="commonTable">
+                  <div class="pointFont" id="currPoi">Текущая сумма баллов:
+                  </div> 
+                    <input type="text" size="5" readonly autocomplete="on" name="currentPoints" class="fieldFormat" id="curField"><br> 
+                      <div class="pointFont" id="teckPoi">Следующий уровень техники:
+                      </div> 
+                        <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="fieldFormat" id="techField">
+                </td>
+                
+                <td class="redZone redZonePosition" align="center">
+                   
+                    <div class="spinContainer">
+                       <input type="image" alt="КР-1" height="64" width="64" class="iconFormat" id="Red-1"> 
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_1" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_1" onclick="lbClick(document.getElementById('localRed_1'),this,document.getElementById('Red-1'),'red'); refresh(document.getElementById('rightPointButton_red_1'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_1" onclick="rbClick(document.getElementById('localRed_1'),this,document.getElementById('Red-1'),'red'); refresh(document.getElementById('leftPointButton_red_1'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    
+                    <div class="spinContainer">
+                        <input type="image" alt="КР-2" height="64" width="64" class="iconFormat" id="Red-2">
+                        <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_2" value="-">
+                        <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_2" onclick="lbClick(document.getElementById('localRed_2'),this,document.getElementById('Red-2'),'red'); refresh(document.getElementById('rightPointButton_red_2'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_2" onclick="rbClick(document.getElementById('localRed_2'),this,document.getElementById('Red-2'),'red'); refresh(document.getElementById('leftPointButton_red_2'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                        
+                    </div>
+                    
+                </td>
+                
+                <td class="yellowZone yellowZonePosition" align="center">
+                 
+                  <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-1" height="64" width="64" class="iconFormat" id="Yellow-1"> 
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_1" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_1" onclick="lbClick(document.getElementById('localYellow_1'),this,document.getElementById('Yellow-1'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_1'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_1" onclick="rbClick(document.getElementById('localYellow_1'),this,document.getElementById('Yellow-1'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_1'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    
+                  <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-2" height="64" width="64" class="iconFormat" id="Yellow-2">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_2" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_2" onclick="lbClick(document.getElementById('localYellow_2'),this,document.getElementById('Yellow-2'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_2'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_2" onclick="rbClick(document.getElementById('localYellow_2'),this,document.getElementById('Yellow-2'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_2'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                  
+                </td>
+                <td class="greenZone greenZonePosition" align="center">
+                 
+                <div class="spinContainer">
+                       <input type="image" alt="ЗЕЛ-1" height="64" width="64" class="iconFormat" id="Green-1"> 
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localGreen_1" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_green_1" onclick="lbClick(document.getElementById('localGreen_1'),this,document.getElementById('Green-1'),'green'); refresh(document.getElementById('rightPointButton_green_1'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_green_1" onclick="rbClick(document.getElementById('localGreen_1'),this,document.getElementById('Green-1'),'green'); refresh(document.getElementById('leftPointButton_green_1'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div> 
+                 
+                   
+                     
+                </td>
+                
+                <td class="commonTable">
+                  <div class="pointFont" id="planText">Планируемая сумма баллов:
+                  </div>
+                    <input type="number" width="20px" autocomplete="on" name="planPoints" class="fieldFormat" id="planField"> <br>
+                      <div class="pointFont" id="eventText"> Следующий уровень мероприятий:
+                      </div> 
+                        <input type="text" readonly size="5" autocomplete="on" name="nextEventPoints" class="fieldFormat" id="eventField">
+                </td>
+                
+            </tr>
+                <tr>
+                <td align="center" colspan="5" class="semesterLook secondSemester">Второй семестр</td>
+                </tr>
+             <tr style="width: auto;">
+                 <td class="commonTable"><div class="techName">Oculus Rift</div> <br>
+                    <img src="img/oc.jpeg.jpg" width="90%" class="technicImages" id="OCULUS"><br> 
+                    <a href="https://www.oculus.com/" target="_blank">
+                      <div class="descr">Описание</div>
+                    </a> <br> 
+                      <div class="summText">Сумма баллов:</div><br>
+                         <input type="text" readonly size="5" autocomplete="on" name="oculusPoints" class="fieldFormat pointsFields" value="16">
+                 </td>
+                <td class="redZone redZonePosition" align="center">
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="КР-3" height="64" width="64" class="iconFormat" id="Red-3"> 
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_3" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_3" onclick="lbClick(document.getElementById('localRed_3'),this,document.getElementById('Red-3'),'red'); refresh(document.getElementById('rightPointButton_red_3'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_3" onclick="rbClick(document.getElementById('localRed_3'),this,document.getElementById('Red-3'),'red'); refresh(document.getElementById('leftPointButton_red_3'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                  
+                 <div class="spinContainer">
+                       <input type="image" alt="КР-4" height="64" width="64" class="iconFormat" id="Red-4">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_4" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_4" onclick="lbClick(document.getElementById('localRed_4'),this,document.getElementById('Red-4'),'red'); refresh(document.getElementById('rightPointButton_red_4'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_4" onclick="rbClick(document.getElementById('localRed_4'),this,document.getElementById('Red-4'),'red'); refresh(document.getElementById('leftPointButton_red_4'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>  
+                   
+                </td>
+                <td class="yellowZone yellowZonePosition" align="center">
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-3" height="64" width="64" class="iconFormat" id="Yellow-3">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_3" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_3" onclick="lbClick(document.getElementById('localYellow_3'),this,document.getElementById('Yellow-3'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_3'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_3" onclick="rbClick(document.getElementById('localYellow_3'),this,document.getElementById('Yellow-3'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_3'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-4" height="64" width="64" class="iconFormat" id="Yellow-4">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_4" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_4" onclick="lbClick(document.getElementById('localYellow_4'),this,document.getElementById('Yellow-4'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_4'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_4" onclick="rbClick(document.getElementById('localYellow_4'),this,document.getElementById('Yellow-4'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_4'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    
+                      
+                </td>
+                 <td class="greenZone greenZonePosition" align="center">
+                  
+                   <div class="spinContainer">
+                       <input type="image" alt="ЗЕЛ-2" height="64" width="64" class="iconFormat" id="Green-2"> 
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localGreen_2" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_green_2" onclick="lbClick(document.getElementById('localGreen_2'),this,document.getElementById('Green-2'),'green'); refresh(document.getElementById('rightPointButton_green_2'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_green_2" onclick="rbClick(document.getElementById('localGreen_2'),this,document.getElementById('Green-2'),'green'); refresh(document.getElementById('leftPointButton_green_2'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div> 
+                      
+                 </td>
+                 <td class="commonTable">
+                   <div class="rusTecNEventText">Команда и проект по разработке приложений для VR</div><br>
+                     <div class="descr"> Описание</div> <br> 
+                       <div class="summText">Сумма баллов:</div> 
+                         <input type="text" readonly size="5" autocomplete="on" name="vrProjectPoints" class="fieldFormat pointsFields" value="16">
+                 </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" class="semesterLook thirdSemester">*Третий семестр*</td>
+            </tr>
+            <tr>
+                <td class="commonTable">
+                  <div class="techName">HTC Vive</div> <br> 
+                    <img src="img/AB88337_6.jpg" width="90%" class="technicImages" id="HTC">   <br>
+                      <a href="https://www.vive.com/ru/" target="_blank">
+                        <div class="descr"> Описание</div> 
+                      </a><br> 
+                        <div class="summText">Сумма баллов:</div>
+                          <input type="text" readonly size="5" autocomplete="on" name="htcvivePoints" class="fieldFormat pointsFields" value="32">
+                </td>
+               <td class="redZone redZonePosition" align="center">
+                
+                <div class="spinContainer">
+                       <input type="image" alt="КР-5" height="64" width="64" class="iconFormat" id="Red-5">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_5" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_5" onclick="lbClick(document.getElementById('localRed_5'),this,document.getElementById('Red-5'),'red'); refresh(document.getElementById('rightPointButton_red_5'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_5" onclick="rbClick(document.getElementById('localRed_5'),this,document.getElementById('Red-5'),'red'); refresh(document.getElementById('leftPointButton_red_5'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                  
+                <div class="spinContainer">
+                       <input type="image" alt="КР-6" height="64" width="64" class="iconFormat" id="Red-6">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_6" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_6" onclick="lbClick(document.getElementById('localRed_6'),this,document.getElementById('Red-6'),'red'); refresh(document.getElementById('rightPointButton_red_6'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_6" onclick="rbClick(document.getElementById('localRed_6'),this,document.getElementById('Red-6'),'red'); refresh(document.getElementById('leftPointButton_red_6'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                
+                    
+               </td>
+                <td class="yellowZone yellowZonePosition" align="center">
+                 
+                <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-5" height="64" width="64" class="iconFormat" id="Yellow-5">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_5" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_5" onclick="lbClick(document.getElementById('localYellow_5'),this,document.getElementById('Yellow-5'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_5'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_5" onclick="rbClick(document.getElementById('localYellow_5'),this,document.getElementById('Yellow-5'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_5'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>    
+                  
+                <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-6" height="64" width="64" class="iconFormat" id="Yellow-6">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_6" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_6" onclick="lbClick(document.getElementById('localYellow_6'),this,document.getElementById('Yellow-6'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_6'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_6" onclick="rbClick(document.getElementById('localYellow_6'),this,document.getElementById('Yellow-6'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_6'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>    
+                   
+                </td>
+                <td class="greenZone greenZonePosition" align="center">
+                 
+              
+                  <div class="spinContainer">
+                       <input type="image" alt="ЗЕЛ-3" height="64" width="64" class="iconFormat" id="Green-3">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localGreen_3" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_green_3" onclick="lbClick(document.getElementById('localGreen_3'),this,document.getElementById('Green-3'),'green'); refresh(document.getElementById('rightPointButton_green_3'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_green_3" onclick="rbClick(document.getElementById('localGreen_3'),this,document.getElementById('Green-3'),'green'); refresh(document.getElementById('leftPointButton_green_3'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>    
+                  
+                   
+                    
+                </td>
+                <td class="commonTable">
+                  <div class="rusTecNEventText">Команда и проект по разработке хакатонов для VR</div> <br>
+                    <div class="descr"> Описание</div> <br> 
+                      <div class="summText">Сумма баллов:</div>
+                        <input type="text" readonly size="5" autocomplete="on" name="vrHacatonPoints" class="fieldFormat pointsFields" value="32">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" class="semesterLook forthSemester">*Четвертый семестр*</td>
+            </tr>
+            <tr>
+                <td class="commonTable">
+                  <div class="techName">Epson BT-300</div> <br>
+                    <img src="img/epson-moverio-bt-300.jpg" width="90%" class="technicImages" id="EPSON"> <br>
+                      <a href="http://epson.ru/catalog/moverio/epson-moverio-bt-300/?page=description" target="_blank">
+                        <div class="descr"> Описание</div> 
+                      </a><br>
+                        <div class="summText"> Сумма баллов:</div>
+                          <input type="text" readonly size="5" autocomplete="on" name="epsonPoints" class="fieldFormat pointsFields" value="46">
+                </td>
+                <td class="redZone redZonePosition" align="center" style="height: 430px;">
+                
+                 <div class="spinContainer">
+                      <input type="image" alt="КР-7" height="64" width="64" class="iconFormat" id="Red-7">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_7" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_7" onclick="lbClick(document.getElementById('localRed_7'),this,document.getElementById('Red-7'),'red'); refresh(document.getElementById('rightPointButton_red_7'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_7" onclick="rbClick(document.getElementById('localRed_7'),this,document.getElementById('Red-7'),'red'); refresh(document.getElementById('leftPointButton_red_7'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="КР-8" height="64" width="64" class="iconFormat" id="Red-8"> 
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_8" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_8" onclick="lbClick(document.getElementById('localRed_8'),this,document.getElementById('Red-8'),'red'); refresh(document.getElementById('rightPointButton_red_8'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_8" onclick="rbClick(document.getElementById('localRed_8'),this,document.getElementById('Red-8'),'red'); refresh(document.getElementById('leftPointButton_red_8'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                      
+                </td>
+                <td class="yellowZone yellowZonePosition" align="center">
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-7" height="64" width="64" class="iconFormat" id="Yellow-7">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_7" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_7" onclick="lbClick(document.getElementById('localYellow_7'),this,document.getElementById('Yellow-7'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_7'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_7" onclick="rbClick(document.getElementById('localYellow_7'),this,document.getElementById('Yellow-7'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_7'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>  
+                      
+                 <div class="spinContainer">
+                      <input type="image" alt="ЖЕЛ-8" height="64" width="64" class="iconFormat" id="Yellow-8">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_8" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_8" onclick="lbClick(document.getElementById('localYellow_8'),this,document.getElementById('Yellow-8'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_8'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_8" onclick="rbClick(document.getElementById('localYellow_8'),this,document.getElementById('Yellow-8'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_8'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>      
+                   
+                </td>
+                <td class="greenZone greenZonePosition" align="center">
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="ЗЕЛ-4" height="64" width="64" class="iconFormat" id="Green-4">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localGreen_4" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_green_4" onclick="lbClick(document.getElementById('localGreen_4'),this,document.getElementById('Green-4'),'green'); refresh(document.getElementById('rightPointButton_green_4'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_green_4" onclick="rbClick(document.getElementById('localGreen_4'),this,document.getElementById('Green-4'),'green'); refresh(document.getElementById('leftPointButton_green_4'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>      
+                   
+                 
+                 
+                </td>
+                <td class="commonTable">
+                  <div class="rusTecNEventText">Команда и проект по разработке приложений для AR</div> <br>
+                    <div class="descr"> Описание</div> <br> 
+                      <div class="summText">Сумма баллов:</div>
+                        <input type="text" readonly size="5" autocomplete="on" name="arProjectPoints" class="fieldFormat pointsFields" value="46">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" class="semesterLook fivthSemester">*Пятый семестр*</td>
+            </tr>
+            <tr>
+                <td class="commonTable">
+                  <div class="techName">Hololeans </div><br>
+                    <img src="img/hololens.png" width="90%" class="technicImages" id="HOLOLEANS"><br>
+                      <a href="https://www.microsoft.com/en-us/hololens" target="_blank">
+                        <div class="descr"> Описание</div> 
+                      </a><br>
+                        <div class="summText"> Сумма баллов:</div>
+                          <input type="text" readonly size="5" autocomplete="on" name="hololeansPoints" class="fieldFormat pointsFields pointsFields" value="58">
+                </td>
+                <td class="redZone redZonePosition" align="center" style="height: 375px;">
+                
+                 <div class="spinContainer">
+                       <input type="image" alt="КР-9" height="64" width="64" class="iconFormat" id="Red-9">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_9" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_9" onclick="lbClick(document.getElementById('localRed_9'),this,document.getElementById('Red-9'),'red'); refresh(document.getElementById('rightPointButton_red_9'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_9" onclick="rbClick(document.getElementById('localRed_9'),this,document.getElementById('Red-9'),'red'); refresh(document.getElementById('leftPointButton_red_9'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                  
+                 <div class="spinContainer">
+                       <input type="image" alt="КР-10" height="64" width="64" class="iconFormat" id="Red-10">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_10" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_10" onclick="lbClick(document.getElementById('localRed_10'),this,document.getElementById('Red-10'),'red'); refresh(document.getElementById('rightPointButton_red_10'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_10" onclick="rbClick(document.getElementById('localRed_10'),this,document.getElementById('Red-10'),'red'); refresh(document.getElementById('leftPointButton_red_10'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>      
+                      
+                </td>
+                <td class="yellowZone yellowZonePosition" align="center">
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-9" height="64" width="64" class="iconFormat" id="Yellow-9">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_9" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_9" onclick="lbClick(document.getElementById('localYellow_9'),this,document.getElementById('Yellow-9'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_9'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_9" onclick="rbClick(document.getElementById('localYellow_9'),this,document.getElementById('Yellow-9'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_9'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>            
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-10" height="64" width="64" class="iconFormat" id="Yellow-10">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_10" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_10" onclick="lbClick(document.getElementById('localYellow_10'),this,document.getElementById('Yellow-10'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_10'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_10" onclick="rbClick(document.getElementById('localYellow_10'),this,document.getElementById('Yellow-10'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_10'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>  
+                 
+                       
+                </td>
+                <td class="greenZone greenZonePosition" align="center">
+                 
+                
+                 <div class="spinContainer">
+                       <input type="image" alt="ЗЕЛ-5" height="64" width="64" class="iconFormat" id="Green-5">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localGreen_5" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_green_5" onclick="lbClick(document.getElementById('localGreen_5'),this,document.getElementById('Green-5'),'green'); refresh(document.getElementById('rightPointButton_green_5'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_green_5" onclick="rbClick(document.getElementById('localGreen_5'),this,document.getElementById('Green-5'),'green'); refresh(document.getElementById('leftPointButton_green_5'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>      
+                   
+                      
+                </td>
+                <td class="commonTable">
+                  <div class="rusTecNEventText">Команда и проект по разработке хакатонов для AR</div> <br>
+                    <div class="descr"> Описание </div><br>
+                      <div class="summText"> Сумма баллов: </div>
+                        <input type="text" readonly size="5" autocomplete="on" name="arHacatonPoints" class="fieldFormat pointsFields" value="58">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" class="semesterLook sixthSemester">*\_Шестой семестр_/*</td>
+            </tr>
+            <tr>
+                <td class="commonTable">
+                  <div class="rusTecNEventText">Беговая дорожка виртуальной реальности</div> <br>
+                    <img src="img/rider.jpg" width="90%" class="technicImages" id="RUNROAD"> <br> 
+                      <a href="http://virtualdream.ru/shop/platformi/kat-walk" target="_blank">
+                        <div class="descr">Описание</div>
+                      </a> <br>
+                        <div class="summText"> Сумма баллов:</div>
+                          <input type="text" readonly size="5" autocomplete="on" name="vrrunPoints" class="fieldFormat pointsFields" value="66">
+                </td>
+                <td class="redZone redZonePosition" align="center">
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="КР-11" height="64" width="64" class="iconFormat" id="Red-11">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_11" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_11" onclick="lbClick(document.getElementById('localRed_11'),this,document.getElementById('Red-11'),'red'); refresh(document.getElementById('rightPointButton_red_11'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_11" onclick="rbClick(document.getElementById('localRed_11'),this,document.getElementById('Red-11'),'red'); refresh(document.getElementById('leftPointButton_red_11'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>        
+                 
+                 <div class="spinContainer">
+                       <input type="image" alt="КР-12" height="64" width="64" class="iconFormat" id="Red-12">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_12" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_12" onclick="lbClick(document.getElementById('localRed_12'),this,document.getElementById('Red-12'),'red'); refresh(document.getElementById('rightPointButton_red_12'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_12" onclick="rbClick(document.getElementById('localRed_12'),this,document.getElementById('Red-12'),'red'); refresh(document.getElementById('leftPointButton_red_12'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>   
+                                               
+                </td>
+                 <td class="yellowZone yellowZonePosition" align="center">
+                  
+                  <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-11" height="64" width="64" class="iconFormat" id="Yellow-11">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_11" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_11" onclick="lbClick(document.getElementById('localYellow_11'),this,document.getElementById('Yellow-11'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_11'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_11" onclick="rbClick(document.getElementById('localYellow_11'),this,document.getElementById('Yellow-11'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_11'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>   
+                
+                  <div class="spinContainer">
+                       <input type="image" alt="ЖЕЛ-12" height="64" width="64" class="iconFormat" id="Yellow-12">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_12" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_12" onclick="lbClick(document.getElementById('localYellow_12'),this,document.getElementById('Yellow-12'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_12'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_12" onclick="rbClick(document.getElementById('localYellow_12'),this,document.getElementById('Yellow-12'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_12'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>   
+                       
+                                      
+                 </td>
+                <td class="greenZone greenZonePosition" align="center">
+                
+                 <div class="spinContainer">
+                       <input type="image" alt="ЗЕЛ-6" height="64" width="64" class="iconFormat" id="Green-6">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localGreen_6" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_green_6" onclick="lbClick(document.getElementById('localGreen_6'),this,document.getElementById('Green-6'),'green'); refresh(document.getElementById('rightPointButton_green_6'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_green_6" onclick="rbClick(document.getElementById('localGreen_6'),this,document.getElementById('Green-6'),'green'); refresh(document.getElementById('leftPointButton_green_6'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>    
+                  
+                </td>
+                <td class="commonTable">
+                  <div class="rusTecNEventText">Проектная команда в сфере интернета вещей </div><br>
+                    <div class="descr"> Описание</div> <br>
+                      <div class="summText"> Сумма баллов:</div>
+                        <input type="text" readonly size="5" autocomplete="on" name="iotPoints" class="fieldFormat pointsFields" value="66"> 
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" class="semesterLook seventhSemester">**\_Седьмой семестр_/**</td>
+            </tr>
+            <tr>
+                <td class="commonTable">
+                  <div class="rusTecNEventText">Лаборатория цифрового производства</div> <br>
+                    <div class="descr"> Описание </div><br>
+                      <div class="summText"> Сумма баллов:</div>
+                        <input type="text" readonly size="5" autocomplete="on" name="labPoints" class="fieldFormat pointsFields" value="78">
+                </td>
+               <td class="redZone redZonePosition" align="center" style="height: 460px;">
+                
+                 <div class="spinContainer">
+                      <input type="image" alt="КР-13" height="64" width="64" class="iconFormat" id="Red-13">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_13" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_13" onclick="lbClick(document.getElementById('localRed_13'),this,document.getElementById('Red-13'),'red'); refresh(document.getElementById('rightPointButton_red_13'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_13" onclick="rbClick(document.getElementById('localRed_13'),this,document.getElementById('Red-13'),'red'); refresh(document.getElementById('leftPointButton_red_13'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>  
+                  
+                 <div class="spinContainer">
+                      <input type="image" alt="КР-14" height="64" width="64" class="iconFormat" id="Red-14">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localRed_14" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_red_14" onclick="lbClick(document.getElementById('localRed_14'),this,document.getElementById('Red-14'),'red'); refresh(document.getElementById('rightPointButton_red_14'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_red_14" onclick="rbClick(document.getElementById('localRed_14'),this,document.getElementById('Red-14'),'red'); refresh(document.getElementById('leftPointButton_red_14'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>  
+                                          
+                </td>
+                 <td class="yellowZone yellowZonePosition" align="center">
+                  
+                   <div class="spinContainer">
+                      <input type="image" alt="ЖЕЛ-13" height="64" width="64" class="iconFormat" id="Yellow-13">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_13" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_13" onclick="lbClick(document.getElementById('localYellow_13'),this,document.getElementById('Yellow-13'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_13'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_13" onclick="rbClick(document.getElementById('localYellow_13'),this,document.getElementById('Yellow-13'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_13'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>  
+                      
+                   <div class="spinContainer">
+                      <input type="image" alt="ЖЕЛ-14" height="64" width="64" class="iconFormat" id="Yellow-14">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localYellow_14" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_yellow_14" onclick="lbClick(document.getElementById('localYellow_14'),this,document.getElementById('Yellow-14'),'yellow'); refresh(document.getElementById('rightPointButton_yellow_14'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_yellow_14" onclick="rbClick(document.getElementById('localYellow_14'),this,document.getElementById('Yellow-14'),'yellow'); refresh(document.getElementById('leftPointButton_yellow_14'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>  
+                           
+                 </td>
+                <td class="greenZone greenZonePosition" align="center">
+                 
+                   <div class="spinContainer">
+                       <input type="image" alt="ЗЕЛ-7" height="64" width="64" class="iconFormat" id="Green-7">
+                       <input type="text" readonly size="5" autocomplete="on" name="nextLevelPoints" class="pointFormat" id="localGreen_7" value="-">
+                       <div class="spinnersBlock">
+                           <div class="circleSpinBaseLeft">
+                              <div class="arrowLeft" id="leftPointButton_green_7" onclick="lbClick(document.getElementById('localGreen_7'),this,document.getElementById('Green-7'),'green'); refresh(document.getElementById('rightPointButton_green_7'));">
+                                  
+                              </div>
+                        </div>
+                            <div class="circleSpinBaseRight">
+                              <div class="arrowRight" id="rightPointButton_green_7" onclick="rbClick(document.getElementById('localGreen_7'),this,document.getElementById('Green-7'),'green'); refresh(document.getElementById('leftPointButton_green_7'));">
+                                  
+                              </div>
+                        </div>
+                        
+                        </div>
+                    </div>       
+                             
+                </td>
+                <td class="commonTable">
+                  <div class="rusTecNEventText">Проектная команда в сфере цифрового производства</div> <br>
+                    <div class="descr"> Описание</div> <br>
+                      <div class="summText"> Сумма баллов:</div>
+                        <input type="text" readonly size="5" autocomplete="on" name="labProjectPoints" class="fieldFormat pointsFields" value="78"> 
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" class="semesterLook eighthSemester">\***\_Восьмой семестр_/***/</td>
+            </tr>
+            <tr>
+                <td class="downLeftTable">
+                  <div class="rusTecNEventText">Система захвата движения</div> <br>
+                    <div class="descr"> Описание</div> <br>
+                      <div class="summText"> Сумма баллов:</div>
+                        <input type="text" readonly size="5" autocomplete="on" name="motionCapturePoints" class="fieldFormat pointsFields" value="92">
+                </td>
+                <td class="redZone"></td>
+                <td class="yellowZone"></td>
+                <td class="greenZone"></td>
+                <td class="downRightTable">
+                  <div class="rusTecNEventText">ВКР по технологиям AR и VR </div><br>
+                    <div class="descr"> Описание</div> <br>
+                      <div class="summText">Сумма баллов:</div>
+                        <input type="text" readonly size="5" autocomplete="on" name="finalWorkPoints" class="fieldFormat pointsFields" value="92"> 
+                </td>
+            </tr>
+            
+        </table>
+        </div>
+        <a href="#top"><p align="center" id="up"><b>^Наверх^</b></p></a>
+    </body>
+</html>

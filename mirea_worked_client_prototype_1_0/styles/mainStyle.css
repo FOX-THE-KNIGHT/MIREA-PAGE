@@ -1,0 +1,1296 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Saira');
+@import url('https://fonts.googleapis.com/css?family=Saira');
+@import url('https://fonts.googleapis.com/css?family=Jura|Play|Poiret+One|Russo+One|Saira');
+
+body{
+    position: relative;
+}
+
+.redZone{
+    background: rgba(244, 46, 46, 0.69);
+     border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88);
+}
+
+.yellowZone{
+    background: rgba(236, 250, 72, 0.79);
+     border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88);
+}
+
+.greenZone{
+    background: rgba(31, 245, 138, 0.81);
+     border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88);
+}
+
+.bodyBackground{
+    background: rgba(96, 96, 96, 0.86);
+}
+
+#mainTable{
+    background: rgba(75, 0, 130, 0.06);
+    border: 3px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(47, 56, 56, 0.79);
+    border-radius: 15px 15px 15px 15px;
+}
+.HeadFont{
+    font-family: 'Play', sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.subHeadRed{
+    font-family: 'Play',sans-serif;
+    color: rgba(252, 219, 213, 0.85);
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.subHeadYellow{
+    font-family: 'Play',sans-serif;
+    color: rgba(249, 252, 213, 0.78);
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.subHeadGreen{
+    font-family: 'Play',sans-serif;
+    color: rgba(213, 252, 230, 0.78);
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.semesterLook{
+    font-family: 'Russo One', sans-serif;
+    color: azure;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+     border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88);
+}
+
+.upTable{
+    border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88);
+    border-radius: 10px 0 0 0;
+}
+
+
+.upRightTable{
+    border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88);
+    border-radius: 0 10px 0 0;
+}
+
+.iconFormat{
+    background-color: rgba(0, 150, 98, 0.88);
+    font-family: 'Play',sans-serif;
+    color: azure;
+    text-align: center;
+    perspective: 500px;
+    box-shadow: 1px 2px 1px rgba(0,0,0,.2), 1px 1px 1px rgba(0,0,0,.2);
+    border-radius: 4px;
+}
+
+.iconFormat:hover{
+    animation-name: shake;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+    transform: scale(1.1);
+    box-shadow: 2px 4px 2px rgba(0,0,0,.3), 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.iconFormat::after{
+    content: '';
+    width: 64px;
+    height: 64px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity .5s, transform .8s;
+    
+    
+    background: radial-gradient(transparent, rgba(0,0,0,.4));
+}
+
+.iconFormat:hover::after{
+    opacity: 0;
+}
+/*
+.iconFormat:focus-within{
+    animation-name: clickRotate;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+}  Это на будущее*/
+
+.imag{
+    border: 3px solid #ffd700;
+    border-color: gold;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.imagSiver{
+    border: 3px solid silver;
+    border-color: silver;
+    border-radius: 5px 5px 5px 5px;
+}
+.imagBronze{
+     border: 3px solid #af4300;
+    border-color: #af4300;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.commonTable{
+    border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88); 
+}
+
+.downRightTable{
+     border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88); 
+    border-radius: 0 0 10px 0;
+}
+.downLeftTable{
+     border: 2px solid rgba(59, 59, 59, 0.88);
+    border-color: rgba(59, 59, 59, 0.88); 
+    border-radius: 0 0 0 10px;
+}
+
+.firstSemester{
+    color: #daeeff;
+    text-decoration: underline;
+    text-decoration-color: #daeeff;
+    text-decoration-style: solid;
+}
+
+.secondSemester{
+    color: #0e4345;
+    text-decoration: underline;
+    text-decoration-color: #0e2c45;
+    text-decoration-style: double;
+}
+.thirdSemester{
+   color: #1fbdc4;
+    
+}
+.forthSemester{
+   color: #b44a1b;
+    text-decoration: underline;
+    text-decoration-color: #b44a1b;
+    text-decoration-style: solid; 
+}
+.fivthSemester{
+    color: orange;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-decoration-style: double; 
+}
+
+.sixthSemester{
+   color: #ff6c00;
+    text-decoration: underline;
+    text-decoration-color: #ff6c00;
+    text-decoration-style: solid;  
+}
+
+.seventhSemester{
+    color: silver;
+    text-decoration: underline;
+    text-decoration-color: silver;
+    text-decoration-style: double;   
+}
+
+.eighthSemester{
+    color: goldenrod;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration-color: goldenrod;
+    text-decoration-style: solid;    
+}
+
+.technicImages{
+    display: block;
+    margin: auto; 
+    margin-top: 5px; 
+}
+#OCULUS{
+    border: 4px solid red; 
+    border-radius: 6px; 
+    opacity: 0.3; 
+    background-color: gray;
+    outline: silver;
+    position: relative;
+    display: block;
+}
+
+
+#HTC{
+    border: 4px solid red; 
+    border-radius: 6px; 
+    opacity: 0.3; 
+    background-color: gray;
+    outline: silver;
+}
+
+#EPSON{
+    border: 4px solid red; 
+    border-radius: 6px; 
+    opacity: 0.3; 
+    background-color: gray;
+    outline: silver;
+}
+#HOLOLEANS{
+    border: 4px solid red; 
+    border-radius: 6px; 
+    opacity: 0.3; 
+    background-color: gray;
+    outline: silver;
+}
+
+#RUNROAD{
+   border: 4px solid red; 
+    border-radius: 6px; 
+    opacity: 0.3; 
+    background-color: gray;
+    outline: silver; 
+}
+
+#locOc{
+    position: absolute;
+    top:432px;
+    left: 137px;
+    font-family: 'Saira',sans-serif;
+    font-weight: 200;
+    color: rgba(111, 71, 71, 0.67);
+    font-size: 20px;
+    
+}
+
+#locHTC{
+    position: absolute;
+    top:783px;
+    left: 137px;
+    font-family: 'Saira',sans-serif;
+    font-weight: 200;
+    color: rgba(111, 71, 71, 0.67);
+    font-size: 20px;
+    
+}
+
+#locEP{
+    position: absolute;
+    top:1218px;
+    left: 137px;
+    font-family: 'Saira',sans-serif;
+    font-weight: 200;
+    color: rgba(111, 71, 71, 0.67);
+    font-size: 20px;
+    
+}
+
+#locHO{
+    position: absolute;
+    top:1553px;
+    left: 137px;
+    font-family: 'Saira',sans-serif;
+    font-weight: 200;
+    color: rgba(111, 71, 71, 0.67);
+    font-size: 20px;
+    
+}
+
+#locRU{
+    position: absolute;
+    top:1858px;
+    left: 137px;
+    font-family: 'Saira',sans-serif;
+    font-weight: 200;
+    color: rgba(111, 71, 71, 0.67);
+    font-size: 20px;
+    
+}
+.pointFont{
+    font-family: 'Play';
+    font-weight: 300;
+    font-size: 25px;
+    color: azure;
+}
+
+#currPoi{
+    vertical-align: top;
+    margin-top: -20px;
+    text-align: center;
+}
+
+#teckPoi{
+    vertical-align: top;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#curField{
+    width: 80px;
+    display: block;
+    
+    margin-top: 10px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+#techField{
+    width: 80px;
+    display: block;
+   
+    margin-top: 10px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+#planText{
+   vertical-align: top;
+    margin-top: -20px;
+    text-align: center; 
+}
+
+#eventText{
+     vertical-align: top;
+    margin-top: 20px;
+    text-align: center; 
+}
+
+#planField{
+     width: 80px;
+    display: block;
+   
+    margin-top: 10px;
+    margin-left: 125px;
+    margin-right: 125px;
+}
+
+#eventField{
+     width: 80px;
+    display: block;
+   
+    margin-top: 10px;
+    margin-left: 125px;
+    margin-right: 125px; 
+}
+
+.fieldFormat{
+    width: 80px;
+    height: 20px;
+    border: 3px solid rgba(160, 160, 160, 0.89);
+    background: #4b4b4b;
+    color: darkorange;
+    border-radius: 5px;
+    font-family: 'Saira',sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.techName{
+    font-family: 'Audiowide',sans-serif;
+    font-size: 15px;
+    color: azure;
+    text-align: center;
+}
+
+.descr{
+    font-family: 'Play',sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #b73000;
+    width: 100px;
+    margin-left: 115px;
+    margin-right: 115px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid rgba(21, 21, 21, 0.38);
+    border-radius: 4px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.25), inset 0 1px 1px rgba(255,255,255,.2), 0px 2px 0px rgba(0,0,0,.4);
+    transition: background-color .5s ease-in-out, color .3s ease-in-out;
+   
+}
+
+.descr:hover{
+    
+    background-color: chocolate;
+    color: azure;
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.25), inset 0 1px 1px rgba(0,0,0,.2);
+
+}
+
+.descr:active{
+    background-color: rgba(109, 109, 109, 0.76);
+    color: rgba(5, 193, 92, 0.87);
+    cursor: pointer;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.4), inset 0 1px 1px rgba(0,0,0,.3); 
+}
+
+.summText{
+    font-family: 'Play',sans-serif;
+    color: azure;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+.rusTecNEventText{
+    font-family: 'Play',sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: azure;
+    
+}
+.pointsFields{
+     width: 80px;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 125px;
+    margin-right: 125px; 
+}
+
+#up{
+    position: absolute;
+    width: 125px;
+    border-bottom: none;
+    font-family: 'Play',sans-serif;
+    font-size: 28px;
+    color: azure;
+    text-decoration: none;
+    font-weight: 400;
+    left: 46%;
+    margin-top: 10px;
+  
+}
+#up:hover{
+    border: 2px solid azure;
+    background-color: cornflowerblue;
+    text-decoration: underline;
+}
+a {
+    text-decoration: none;
+}
+
+
+@keyframes shake{
+    from{
+        transform: rotate(0deg);
+      
+    }
+    25%{
+        transform: rotate(25deg);
+    }
+    75%{
+        transform: rotate(-25deg);
+    }
+    to{
+        transform: rotate(0deg);
+        
+    }
+}
+/*
+@media only screen and (max-width: 1000px){
+    table{
+        width: 800px;
+        height: auto;
+    }
+    
+    td{
+        width: 80%;
+        height: auto;
+    }
+} */
+
+@keyframes clickRotate{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+/*-------------RED ZONE-----------------*/
+
+.redZonePosition{
+    position: relative;
+    height: auto;
+    width: auto;
+}
+#Red-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Red-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Red-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Red-4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Red-5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Red-6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Red-7{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Red-8{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Red-9{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Red-10{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Red-11{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Red-12{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Red-13{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Red-14{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+/*-----------------------------------------------*/
+
+/*-------YELLOW ZONE ----------*/
+.yellowZonePosition{
+   position: relative;
+    height: auto;
+    width: auto; 
+}
+
+#Yellow-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-7{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-8{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-9{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-10{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-11{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-12{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-13{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Yellow-14{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+
+/*--------------------------*/
+
+/*-------GREEN ZONE--------*/
+
+.greenZonePosition{
+   position: relative;
+    height: auto;
+    width: auto; 
+}
+
+#Green-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Green-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Green-3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+#Green-4{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Green-5{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Green-6{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+#Green-7{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid #838383;
+}
+
+
+/*.........................*/
+
+.spinContainer{
+    position: relative;
+    width: 150px;
+    height: 70px;
+    background-color: transparent;
+    top:0%;
+    left:0%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pointFormat{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 3px solid rgba(163, 161, 161, 0.89);
+    background: #343434;
+    color: darkorange;
+    border-radius: 5px;
+    font-family: 'Saira',sans-serif;
+    font-size: 20px;
+    text-align: center;
+    top: 1%;
+    left: 23%;
+}
+
+.circleSpinBaseRight{
+    position: relative;
+    display: inline-block;
+    
+    top: 0%;
+    left: 5%;
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    cursor: pointer;
+    
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3), inset 1px 2px 0px rgba(255,255,255,.3);
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out;
+}
+
+.circleSpinBaseRight:hover{
+   background-color: #262626;
+   box-shadow:inset 1px 1px 5px rgba(0,0,0,.3),  1px 2px 0px rgba(0,0,0,.3);
+}
+
+.circleSpinBaseLeft{
+   position: relative;
+    display: inline-block;
+    
+    top: 0%;
+    left: -5%;
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    cursor: pointer;
+    
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.3), inset 1px 2px 0px rgba(255,255,255,.3);
+    transition: background-color .5s ease-in-out, box-shadow .5s ease-in-out; 
+}
+
+.circleSpinBaseLeft:hover{
+   background-color: #262626;
+   box-shadow:inset 1px 1px 5px rgba(0,0,0,.3),  1px 2px 0px rgba(0,0,0,.3);
+}
+
+.spinnersBlock {
+    position: relative;
+    width: 70px;
+    height: 28px;
+    background-color: transparent;
+    top: 20%;
+    left: 33px;
+}
+
+.arrowLeft{
+    position: relative;
+    top: 28%;
+    left: -5%;
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transform: rotate(90deg);
+}
+
+
+.arrowRight{
+    position: absolute;
+    top: 28%;
+    left: 27%;
+    width: 0px;
+    height: 0px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transform: rotate(-90deg);
+}
+
+/*.....IDENTITY RED SPINNERS........*/
+
+#leftPointButton_red_1{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_1{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_2{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_2{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_3{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_3{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_4{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_4{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_5{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_5{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_6{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_6{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_7{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_7{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_8{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_8{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_9{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_9{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_10{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_10{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_11{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_11{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_12{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_12{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_13{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_13{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_red_14{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_red_14{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+
+
+/*...............................................*/
+
+/*........Yellow Spinners...............*/
+
+#leftPointButton_yellow_1{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_1{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_2{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_2{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_3{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_3{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_4{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_4{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_5{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_5{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_6{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_6{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_7{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_7{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_8{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_8{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_9{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_9{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_10{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_10{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_11{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_11{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_12{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_12{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_13{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_13{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_yellow_14{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_yellow_14{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+
+/*...........................................*/
+/*...............Green Spinners...............*/
+
+#leftPointButton_green_1{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_green_1{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_green_2{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_green_2{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_green_3{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_green_3{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_green_4{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_green_4{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_green_5{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_green_5{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_green_6{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_green_6{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+#leftPointButton_green_7{
+    border-top: 12px solid orangered; 
+    opacity: .5;
+}
+
+#rightPointButton_green_7{
+  border-top: 12px solid orangered; 
+     opacity: 1;
+}
+
+.lists{
+    left: 30%;
+    position: relative;
+    width: 600px;
+    height: 50px;
+    background-color: transparent;
+}
+
+#directionList{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#profileList{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.listParam{
+    width: 170px;
+    height: 30px;
+    text-align: center;
+    background-color: rgba(106, 121, 124, 0.87);
+    align-items: center;
+    font-family: 'Play',sans-serif;
+    font-size: 20px;
+    color: azure;
+    border: 3px solid silver;
+    border-radius: 4px;
+}
+select option{
+    width: 300px;
+    height: 100px; 
+    
+}
+
+.iconFormat[title]:hover::after{
+    content: attr(title);
+    padding: 4px 8px;
+    color: azure;
+    position: absolute;
+    z-index: 20;
+    background-color: #93a3a7;
+    border: 2px solid #a3a3a3;
+    border-radius: 4px;
+    font-family: 'Play',sans-serif;
+    font-size: 9px;
+}

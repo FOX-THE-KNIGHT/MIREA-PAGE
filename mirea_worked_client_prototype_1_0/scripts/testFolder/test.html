@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>my</title>
+        <link rel="stylesheet" href="spinner.css">
+        <script src="spinScriptTest.js"></script>
+    </head>
+    <body>
+        <div class="spinContainer">
+                  <input type="text" class="pointView" style="position: relative;" id="glovalPointView">
+                   <input type="image" alt="КР-1" height="64" width="64" id="Red-1">
+                   <div class="spinBlock">
+                       <input type="text" class="pointView" value="-" id="localPointView">
+                       <div class="circleSpinBaseRight">
+                           <div class="arrowRight" id="rightPointButton" onclick="rbClick(document.getElementById('localPointView'),this,document.getElementById('Red-1')); refresh(document.getElementById('leftPointButton'));">
+                           
+                       </div>
+                       </div>
+                       <div class="circleSpinBaseLeft">
+                           <div class="arrowLeft" id="leftPointButton" onclick="lbClick(document.getElementById('localPointView'),this,document.getElementById('Red-1')); refresh(document.getElementById('rightPointButton'));">
+                           
+                       </div>
+                       </div>
+                       
+                       
+                   </div>
+        </div>
+    </body>
+</html>
